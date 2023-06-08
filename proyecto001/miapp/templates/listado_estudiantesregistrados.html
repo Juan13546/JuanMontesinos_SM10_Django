@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>
+</title>
+
+<body>
+    <br>
+    <hr>
+    <br>
+    <p> <strong> {{encabezado}} (Método 01: Imprime lista): </strong> </p>
+    {{estudiantes}}
+    <p> <strong> {{encabezado}} (Método 02: Imprime lista utilizando for):
+    </strong> </p>
+    <ul>
+    {% for estudiante in estudiantes %}
+    <li>{{forloop.counter}}. {{estudiante}}</li>
+    {% empty %}
+    <p> No hay {{encabezado}} </p>
+    {% endfor %}
+    </ul> 
+</body>
+</html>
